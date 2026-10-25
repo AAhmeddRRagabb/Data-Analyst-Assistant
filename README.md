@@ -18,6 +18,20 @@ Example questions:
 - "Show a bar chart of the average price by product type."
 - "Compare the number of products offered by each vendor."
 
+## Project Structure
+
+| Folder / File | Role |
+| --- | --- |
+| `core/` | Main project functionalities: database queries, audio recording and transcription, and plotting. |
+| `helpers/` | Shared helper functions and system settings loaded from `.env`. |
+| `llms/` | The orchestrator that connects to the LLM and manages its tool-calling workflow. |
+| `llms/tools/` | Tool definitions exposed to the LLM and handlers that execute tool calls and return results. |
+| `llms/context/` | The system prompt and database metadata used to guide the assistant. |
+| `assets/dbs/` | The source CSV dataset and the SQLite database created at startup. |
+| `assets/request_metadata/` | Generated plots and audio files used during requests. |
+| `main.py` | App entry point: prepares the database and builds the Gradio interface. |
+| `requirements.txt` | Python dependencies needed to run the project. |
+
 ## Tools
 
 | Tool | Purpose |
